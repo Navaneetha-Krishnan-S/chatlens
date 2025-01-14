@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ChatLens AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #141e30, #243b55);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(45deg, rgba(36, 59, 85, 0.6), rgba(20, 30, 48, 0.6)), url('ai.jpg') no-repeat center center / cover;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: slideInFromTop 1s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: slideInFromBottom 1s ease-in-out;
+    }
+
+    .hero .btn {
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      background-color:  #5bea7a;
+      color: #141e30;
+      transition: background-color 0.3s ease;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero .btn:hover {
+      background-color: #ffcc70;
+    }
+
+    .features {
+      padding: 80px 10%;
+      text-align: center;
+      background: linear-gradient(45deg, #141e30, #243b55);
+    }
+
+    .features h2 {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      animation: slideInFromLeft 1s ease-in-out;
+    }
+
+    .feature-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .feature-box i {
+      font-size: 4rem;
+      color:  #5bea7a;
+      margin-right: 20px;
+      transition: transform 0.3s;
+    }
+
+    .feature-box i:hover {
+      transform: scale(1.1);
+    }
+
+    .feature-box p {
+      max-width: 800px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromTop {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInFromBottom {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInFromLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Media Queries for Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+      }
+
+      .features .feature-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .feature-box i {
+        margin-bottom: 15px;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .features h2 {
+        font-size: 1.5rem;
+      }
+
+      .feature-box p {
+        font-size: 0.9rem;
+      }
+
+      footer p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="color: #5bea7a;">ChatLens AI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="chatlens/index.html">Start Chat </a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Welcome to ChatLens AI</h1>
+    <p>Your intelligent assistant, always ready to help you with innovative solutions and insights. Start a conversation now and experience the power of ChatLens AI.</p>
+    <a href="chatlens/index.html" class="btn">Start Chat</a>
+  </div>
+
+  <section class="features" id="features">
+    <h2>ChatLens AI Features</h2>
+    <div class="feature-box">
+      <i class="fas fa-robot"></i>
+      <p>Engage in interactive, intelligent conversations with AI. Our system understands and responds with insightful feedback.</p>
+    </div>
+   
+    <div class="feature-box">
+      <i class="fas fa-image"></i>
+      <p>Allows user to upload Image and ask details, The ChatLens AI will interprete the image and give answer to your question.</p>
+    </div>
+    <div class="feature-box">
+        <i class="fas fa-cloud"></i>
+        <p>Cloud-powered, ensuring seamless, real-time communication across multiple platforms. Access it anytime, anywhere.</p>
+      </div>
+  </section>
+
+  <footer>
+    <p>&copy; © 2025 Created by SANJAY.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
